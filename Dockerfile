@@ -1,3 +1,5 @@
+#maintainer alexandre.rubio@verifone.com
+
 FROM openjdk:8-jdk
 
 ARG MAVEN_VERSION=3.3.9
