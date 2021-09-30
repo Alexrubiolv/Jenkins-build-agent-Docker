@@ -17,6 +17,13 @@ RUN useradd -m -d /var/jenkins-agent -s /bin/sh jenkins &&\
 # SSH stuff
 RUN mkdir /var/run/sshd && chmod 0755 /var/run/sshd
 
+
+#Jenkins permissions
+RUN apt-get update \
+      && apt-get install -y sudo \
+      && rm -rf /var/lib/apt/lists/*
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
+
 # Maven
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && curl -fsSL http://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
