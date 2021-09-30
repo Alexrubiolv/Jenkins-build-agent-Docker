@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 script {
-                    image = docker.build('jftanner/jenkins-agent')
+                    image = docker.build('alexrubiolv/jenkins-agent')
                 }
             }
         }
