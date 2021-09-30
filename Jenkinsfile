@@ -1,7 +1,9 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    agent any
+    agent {
+        label 'kubernetes || kubepod'
+    }
 
     stages {
         stage('Build') {
