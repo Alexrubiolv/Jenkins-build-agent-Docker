@@ -1,5 +1,5 @@
 # TannDev Build Agents
-Standardized docker images for TannDev Jenkins executors.
+Standardized docker images for Jenkins executors.
 
 ## Agents Available
 Currently, there is only one agent available:
