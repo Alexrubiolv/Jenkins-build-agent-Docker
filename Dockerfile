@@ -1,4 +1,9 @@
 # MAINTAINER alexandre.rubio@verifone.com
+FROM jenkins/inbound-agent:alpine
+
+USER root
+#
+RUN apk update && apk add -u libcurl curl
 # maven 3.5
 FROM openjdk:8-jdk
 
